@@ -13,6 +13,8 @@
         enqueue(value:InputValue):void;
         dequeue():InputValue;
     }
+
+
     class Node implements INode{
         value:InputValue;
         next: INode | null;
@@ -54,6 +56,8 @@
             return value;
         }
     }
+
+    
     const queue = new Queue();
     queue.enqueue(1);
     queue.enqueue(2);
