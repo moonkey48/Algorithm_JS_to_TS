@@ -93,8 +93,22 @@
             let leftIndex = 2;
             let rightIndex = 3;
             
-            while((this.heap[leftIndex] && (this.heap[currentIndex] as number) < (this.heap[leftIndex] as number)) ||
-            (this.heap[rightIndex] && (this.heap[currentIndex] as number) < (this.heap[rightIndex] as number))){
+            // while((this.heap[leftIndex] && (this.heap[currentIndex] as number) < (this.heap[leftIndex] as number)) ||
+            // (this.heap[rightIndex] && (this.heap[currentIndex] as number) < (this.heap[rightIndex] as number))){
+            //     if(this.heap[leftIndex] === undefined){
+            //         this._swap(rightIndex, currentIndex);
+            //     }else if(this.heap[rightIndex] === undefined){
+            //         this._swap(leftIndex, currentIndex)
+            //     }else if((this.heap[leftIndex] as number) < (this.heap[rightIndex] as number)){
+            //         this._swap(rightIndex, currentIndex);
+            //     }else if((this.heap[rightIndex] as number) <= (this.heap[leftIndex] as number)){
+            //         this._swap(leftIndex, currentIndex);
+            //     }
+    
+            //     leftIndex = currentIndex *2;
+            //     rightIndex = currentIndex*2+1;
+            // }
+            while((typeof this.heap[leftIndex] !== undefined) && (typeof this.heap[rightIndex] !== undefined)){
                 if(this.heap[leftIndex] === undefined){
                     this._swap(rightIndex, currentIndex);
                 }else if(this.heap[rightIndex] === undefined){
